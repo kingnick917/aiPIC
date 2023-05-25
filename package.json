@@ -19,8 +19,9 @@
 
   
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "start": "concurrently \"react-scripts start\" \"next start\"",
+    "build": "concurrently \"react-scripts build\" \"next build\"" ,
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "next dev"
