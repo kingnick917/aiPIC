@@ -94,6 +94,8 @@ This project is graded based on the following criteria:
 
 * Application should be a unique and novel idea.
 
+*
+
 * Your group should clearly and concisely articulate your project idea.
 
 ### Deployment: 20%
