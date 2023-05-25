@@ -1,6 +1,7 @@
 
 import './App.css';
 import Body from'./components/pages/body';
+import Inportexts from './components/pages/inportexts'
 import {
   ApolloClient,
   InMemoryCache,
@@ -38,6 +39,7 @@ function App() {
     <div className="App">
       <ApolloProvider client={client}>
       <Body/>
+      <Inportexts/>
       </ApolloProvider>
     </div>
   );
