@@ -39,8 +39,9 @@ function App() {
   return (
     <div className="App">
       <ApolloProvider client={client}>
-      <Body/> <APIComponent/>
-      <Inportexts/>
+      <Body/><Inportexts/> 
+       <APIComponent/>
+    
       </ApolloProvider>
     </div>
   );
