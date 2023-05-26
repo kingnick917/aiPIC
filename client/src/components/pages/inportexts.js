@@ -3,6 +3,7 @@ function inportexts(){
 
     return(
     <div>
+      
         <Form onSubmit={handleFormSubmit}>
             <Row>
               <Col xs={12} md={8}>
