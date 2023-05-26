@@ -28,7 +28,7 @@ async function body(){
 
 return(
 <div>
-
+{/* image spot */}
 
 
 
