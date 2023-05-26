@@ -27,4 +27,4 @@ function inportexts(){
     
     
     )}
-    
+    export default inportexts;

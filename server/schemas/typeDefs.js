@@ -5,9 +5,14 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
-    bookCount: String
-    savedBooks: [Book]
   }
+  type image {
+
+
+  }
+
+
+
 
 
   type Mutation {
