@@ -39,6 +39,11 @@ function App() {
   return (
     <div className="App">
       <ApolloProvider client={client}>
+
+      <header className="App-header">
+       <APIComponent />
+      </header>
+
       <Body>
       <Inportexts/> 
       </Body>
