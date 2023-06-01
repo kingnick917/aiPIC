@@ -6,17 +6,19 @@ const typeDefs = gql`
     username: String
     email: String
   }
-  type image {
-
-
+  
+  type Image {
+    imageId: ID!
+    image: String
+    link: String
+    title: String!
   }
 
 
 
 
-
   type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Authapp://resources/notifications.html#
     login(email: String!, password: String!): Auth
   }
 `;

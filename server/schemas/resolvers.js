@@ -23,10 +23,11 @@ const resolvers = {
        const token = signToken(user);
        return token
     },
-    addimage: async(parent {})=>{
-        const addimage = await  addimage. ()
+    addimage: async(parent, {imageData}, context) => {
+      console.log(image)
+        const addimage = await  addimage.any({});
         
-    }
+    },
   },
 };
 
