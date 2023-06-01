@@ -1,5 +1,5 @@
 
-import '../App.css'; 
+// import '../App.css'; 
 // import Head from "next/head";
 import { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
