@@ -36,7 +36,7 @@ module.exports = {
     const token = signToken(user);
     res.json({ token, user });
   },
-  async saveBook({ user, body }, res) {
+  async Image({ user, body }, res) {
     console.log(user);
     try {
       const updatedUser = await User.findOneAndUpdate(
