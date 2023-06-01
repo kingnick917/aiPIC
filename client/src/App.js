@@ -1,7 +1,7 @@
 
 import './App.css';
-import Body from'./components/pages/body';
-import Inportexts from './components/pages/inportexts'
+import Body from './components/pages/Body';
+import Inportexts from './components/pages/inportexts';
 import APIComponent from './components/pages/APIComponent';
 import {
   ApolloClient,

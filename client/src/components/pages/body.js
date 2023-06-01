@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-async function body() {
+async function Body() {
   
   return (<div>{/* image spot */}</div>);
 }
-export default body;
+export default Body;
