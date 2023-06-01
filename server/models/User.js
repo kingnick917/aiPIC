@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 
-
+const imageSchema = require('./Image');
 const userSchema = new Schema(
   {
     username: {
@@ -20,6 +20,10 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+  
+    savedImages: [imageSchema],
+  },
+  {  
     toJSON: {
       virtuals: true,
     },

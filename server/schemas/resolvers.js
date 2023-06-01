@@ -1,3 +1,4 @@
+const { AuthenticationError } = require('apollo-server-express');
 const { User, } = require('../models');
 const { signToken } = require('../utils/auth')
 
@@ -23,11 +24,39 @@ const resolvers = {
        const token = signToken(user);
        return token
     },
-    addimage: async(parent, {imageData}, context) => {
+    saveImage: async(parent, {imageId}, context) => {
       console.log(image)
-        const addimage = await  addimage.any({});
-        
+        const saveimage = await  saveimage.any({});
+        if (context.user) {
+          const updatedUser = await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $push: { savedImages: imageData } },
+            { new: true }
+          );
+          return updatedUser;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
+
+// 
+// IMAGEDATA OR IMAGEID TO IDENTIFY IMAGE IN DATABASE????
+//
+ 
+    removeImage: async (parent, { imageId }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedImages: { imageId } } },
+          { new: true }
+        );
+
+        return updatedUser;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
     },
+
+
   },
 };
 
