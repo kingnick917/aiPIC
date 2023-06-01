@@ -24,7 +24,7 @@ const resolvers = {
        const token = signToken(user);
        return token
     },
-    saveImage: async(parent, {imageId}, context) => {
+    saveImage: async(parent, {imageData}, context) => {
       console.log(image)
         const saveimage = await  saveimage.any({});
         if (context.user) {
@@ -41,7 +41,7 @@ const resolvers = {
 // 
 // IMAGEDATA OR IMAGEID TO IDENTIFY IMAGE IN DATABASE????
 //
- 
+
     removeImage: async (parent, { imageId }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
