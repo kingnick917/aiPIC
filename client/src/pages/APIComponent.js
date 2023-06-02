@@ -79,7 +79,7 @@ import { Configuration, OpenAIApi } from "openai";
               </>
               ) : (
               <>
-                <h2>Generate an Image using Open AI API</h2>
+                <h2> Welcome to aiPIC </h2>
       
                 <textarea
                   className="app-input"
