@@ -1,8 +1,8 @@
 
 import './App.css';
-import Body from './components/pages/Body';
-import Inportexts from './components/pages/inportexts';
-import APIComponent from './components/pages/APIComponent';
+import Body from './pages/Body';
+import Importexts from './pages/importexts';
+import APIComponent from './pages/APIComponent';
 import {
   ApolloClient,
   InMemoryCache,
@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       <ApolloProvider client={client}>
       <Body>
-      <Inportexts/> 
+      <Importexts/> 
       </Body>
       <APIComponent/>
       </ApolloProvider>
