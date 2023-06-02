@@ -8,6 +8,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import { BrowserRouter } from "react-router-dom";
 
 // import image from './pages/APIComponent';
 import Navbar from "./components/navbar";
@@ -35,10 +36,12 @@ function App() {
 
   return (
       <ApolloProvider client={client}>
+        <BrowserRouter>
        <div className="App">
       <Navbar/> 
       <APIComponent/>
       </div>
+      </BrowserRouter>
       </ApolloProvider>
   );
 }

@@ -12,17 +12,17 @@ const resolvers = {
   },
   Mutation: {
     login: async (parent, { email, password }) => {
-      const user = await User.findOne(email)
+      const user = await User.findOne({email})
       user.isCorrectPassword(password)
       const token = signToken(user);
-      return token
+      return {token,user}
     },
     
     addUser: async (parent, { username, email, password }) => {
       console.log(username, email, password)
-       const user = await User.create(username, email, password)
+       const user = await User.create({username, email, password})
        const token = signToken(user);
-       return token
+       return {token,user}
     },
     saveImage: async(parent, {imageData}, context) => {
       console.log(image)
