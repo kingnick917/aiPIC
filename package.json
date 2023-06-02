@@ -16,8 +16,8 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "apollo-server-express": "^3.11.1",
+    "apollo-server-express": "^3.6.2",
     "express": "^4.17.2",
-    "graphql": "^15.8.0"
+    "graphql": "^16.3.0"
   }
 }

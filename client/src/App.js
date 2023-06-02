@@ -1,30 +1,28 @@
-
-import './App.css';
-import Body from './pages/Body';
-import Importexts from './pages/importexts';
-import APIComponent from './pages/APIComponent';
+import "./App.css";
+import Body from "./pages/Body";
+import Importexts from "./pages/importexts";
+import APIComponent from "./pages/APIComponent";
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
 // import image from './pages/APIComponent';
-import Navbar from './components/navbar';
+import Navbar from "./components/navbar";
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
-
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -34,21 +32,15 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-
-
-
-
 function App() {
   return (
-    <div className="App">
       <ApolloProvider client={client}>
-      <Body>
-      <Navbar/> 
-      <Inportexts/> 
-      </Body>
-      <APIComponent/>
+        <div>
+          <Navbar />
+          <Importexts />
+        </div>
+        <APIComponent />
       </ApolloProvider>
-    </div>
   );
 }
 
