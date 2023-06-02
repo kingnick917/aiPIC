@@ -1,7 +1,6 @@
-
+import { version } from 'react';
 import './App.css';
 import Body from './pages/Body';
-import Importexts from './pages/importexts';
 import APIComponent from './pages/APIComponent';
 import {
   ApolloClient,
@@ -39,13 +38,12 @@ const client = new ApolloClient({
 
 
 function App() {
+  console.log(version)
   return (
     <div className="App">
       <ApolloProvider client={client}>
-      <Body>
       <Navbar/> 
-      <Inportexts/> 
-      </Body>
+      <Body/>
       <APIComponent/>
       </ApolloProvider>
     </div>

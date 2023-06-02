@@ -3,8 +3,12 @@ import React, { useState } from "react";
 
 async function importexts(){
 
+
+
+  
   const [imageInput, setimageInput] = useState("");
   const [result, setResult] = useState();
+  const [loading, setLoading] = useState(false);
 
 
 

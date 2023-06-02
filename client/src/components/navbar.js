@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
-
+import { Nav,Navbar,Modal,Tab } from 'react-bootstrap';
 import Auth from '../utils/auth';
 
 const AppNavbar = () => {
