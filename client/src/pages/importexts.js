@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-async function inportexts(){
+async function importexts(){
 
   const [imageInput, setimageInput] = useState("");
   const [result, setResult] = useState();
@@ -61,4 +61,4 @@ async function inportexts(){
     
     
     )}
-    export default inportexts;
+    export default importexts;
