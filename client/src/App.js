@@ -1,8 +1,8 @@
 
 import './App.css';
-import Body from './components/pages/Body';
-import Inportexts from './components/pages/inportexts';
-import APIComponent from './components/pages/APIComponent';
+import Body from './pages/Body';
+import Inportexts from './pages/inportexts';
+import APIComponent from './pages/APIComponent';
 import {
   ApolloClient,
   InMemoryCache,
@@ -12,7 +12,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 // import image from './pages/APIComponent';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,6 +43,7 @@ function App() {
     <div className="App">
       <ApolloProvider client={client}>
       <Body>
+      <Navbar/> 
       <Inportexts/> 
       </Body>
       <APIComponent/>
