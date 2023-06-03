@@ -37,7 +37,7 @@ const SignupForm = () => {
 
 
      
-      Auth.addUser(data.addUser.token)
+      Auth.login(data.addUser.token)
     } catch (err) {
       console.log(err);
       setShowAlert(true);
