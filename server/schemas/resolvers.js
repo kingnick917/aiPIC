@@ -25,7 +25,6 @@ const resolvers = {
        return {token,user}
     },
     saveImage: async(parent, {imageData}, context) => {
-      console.log(image)
         const saveimage = await  saveimage.any({});
         if (context.user) {
           const updatedUser = await User.findByIdAndUpdate(
