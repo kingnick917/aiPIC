@@ -18,14 +18,14 @@ aiPIC is a simple AI picture generator that is easy to use. You create an accoun
 
 
 
-## Credits
-
-
 
 ## License
 
 
 ## Features
+Free to Use: Unlike many AI image generators, our solution is completely free to use. We believe in democratizing access to AI technology and making it available to everyone.
+
+No API Charges: By developing the image generator in-house, we eliminate the need for costly API calls, ensuring that users can create images without incurring any expenses.
 
 
 
