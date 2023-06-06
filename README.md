@@ -20,7 +20,7 @@ aiPIC is a simple AI picture generator that is easy to use. You create an accoun
 
 
 ## License
-
+This project is license under MIT
 
 ## Features
 Free to Use: Unlike many AI image generators, our solution is completely free to use. We believe in democratizing access to AI technology and making it available to everyone.
